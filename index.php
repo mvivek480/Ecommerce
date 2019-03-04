@@ -1,116 +1,117 @@
-<?php
-session_start();
-$email = @$_SESSION['email'];
-if(isset($email)){ header('location:user.php'); } else {  } 
-?>
 <!Doctype html>
 <html>
-	<head> 
-		<title>Conchos Home Of Sisig Goodness</title>
-		<link rel="stylesheet" type="text/css" href="css/style.css">  
-		<link rel="icon" href="img/logo.png"> 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<head>
+		<title>Concho's Sisig</title>
+		<link rel="icon" href="img/logo.png">
+
+		<!-- CUSTOM JS/CSS -->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+		<!-- FLAT UI JS/CSS -->
+		<link rel="stylesheet" type="text/css" href="Ui/dist/css/flat-ui.css">
+		<link rel="stylesheet" type="text/css" href="Ui/dist/css/flat-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="Ui/dist/css/flat-ui.css.map">
+		<link rel="stylesheet" type="text/css" href="Ui/dist/css/vendor/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="Ui/dist/js/flat-ui.js"></script>
+
+		<!-- Font awesome -->
 		<link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.css">
+
+
+		<!-- Animate -->
 		<link rel="stylesheet" type="text/css" href="css/animate.css">
+
+		<!-- JQUERY -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/default.js"></script>
 	</head>
-	<body> 
+
+	<body>
+
+		<!-- Start of -->
+		<!-- End of -->
+
+
+
+		<!-- Start of Container -->
 		<div class="container">
-			<!-- Header -->
-			<div class="header animated fadeInDown">
-				<div class="a"> 
-					<span class=""><a href="about.php"><i class="fa fa-star"></i> <p class="rwd">About</p></a></span>
-					<span class="active"><a href="user.php"><i class="fa fa-image active"></i> <p class="rwd active">Gallery</p></a></span>
-					<span class=""><a href="contact.php"><i class="fa fa-phone"></i> <p class="rwd">Contact</p></a></span>
+				<!-- Start of header-->
+				 <div class="header">
+					<ul class="left">
+						<li class="active logo"><b><a href="#home"><i class="fa fa-shopping-cart"></i> djfh</a></b></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#gallery">Gallery</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#signup">Facebook</a></li>
+					</ul>
+
+
+					<ul class="right">
+						<li><a href="#about">SignUp</a></li>
+						<li><a href="#about">Terms</a></li>
+						<li><a href="#contact"><i class="fa fa-user"></i></a></li>
+						<li><a href="#signup"><i class="fa fa-search"></i></a></li>
+					</ul>
+
 				</div>
-				<div class="b"> 
-					<span><i class="fa fa-bell"></i></span>
-				</div>
-				<div class="c">
-					<span class="search"><i class="fa fa-search"></i> <p class="rwd"><input placeholder="Search" id='searchr'></p></span> 
-					<span class="join" id="loginmodal">Login</span> 
+				<!-- ENd of header-->
+			<!-- Start of Video Bg-->
+		 	<div class="video-bg">
+
+		 		<div class="welcome">
+		 			<center>
+		 				<h1>Concho's Sisig<br>SHOP & EAT</h1>
+		 				<p>Our specialty (obviously). Grab your go-to or try something new, you wont regret it. These hearty triangles arent for the weak-hearted. Build it the way you desire, we make it fresh, you eat, you win. </p>
+
+		 				<div class="buttons">
+		 					<button class="blue">EAT</button>
+			 				<button class="pink">SLEEP</button>
+			 				<button class="gray">SHOP</button>
+		 				</div>
+		 			</center>
+		 		</div>
+
+		 		<video autoplay="" name="media" loop muted class="video">
+		 			<source src="img/bg.mp4" type="video/mp4">
+		 		</video>
+
+		 	</div>
+			<!-- End of Video Bg -->
+			<!-- Start of food-->
+			<div class="food">
+				<img src="img/bg1.png" alt="img Gal">
+			</div>
+			<!-- End of food-->
+			<!-- Start of  About -->
+			<div class="about" id="about">
+				<div class="about-txt">
+					<h1>ABOUT <b>US</b></h1>
+					<p>A fast food restaurant, also known as a quick service restaurant (QSR) within the industry, is a specific type of restaurant characterized both by its fast food cuisine and by minimal table service. Food served in fast food restaurants typically caters to a "meat-sweet diet" and is offered from a limited menu; is cooked in bulk in advance and kept hot; is finished and packaged to order; and is usually available ready to take away, though seating may be provided.</p>
+					<div class="icon-wrap">
+						<div class="icon-cont">
+							<i class="fa fa-shopping-cart"></i> <br><br><center>Order</center>
+						</div>
+						<div class="icon-cont">
+							<i class="fa fa-money"></i> <br><br><center>Pay</center>
+						</div>
+						<div class="icon-cont">
+							<i class="fa fa-spoon"></i> <br><br><center>Eat</center>
+						</div>
+					</div>
 				</div>
 			</div>
+			<!-- End of  About -->
+			<!-- Start of  Category -->
+			<div class="category">
+					<div class="">
 
-			<div> 
-			<iframe width="100%" height="400" src="https://www.youtube.com/embed/vvUzWOS4G1g?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
 			</div>
+			<!-- End of  Category -->
 
-	
-			<div class="category animated fadeIn">
-				<button id="All" class="active">All</button>
-				<button id="Sisig" class="">Sisig</button>
-				<button id="Main-Meals" class="">Main Meals</button>
-				<button id="For-Kids" class="">For Kids</button>
-				<button id="Desserts" class="">Desserts</button>
-				<button id="Drinks" class="">Drinks</button>
-				<button id="Extras" class="">Extras</button>
-			</div>
- 
-			<div class="prod-content animated slideInLeft" ng-app="myApp" ng-controller="customersCtrl"> 
 
-				<div class="item2" ng-repeat="x in names" id="{{ x.category }}">
-					<span class="a">.
-						<span class="b">P {{ x.price }}</span>
-					</span>
-					<img src="admin/img/uploads/{{ x.image }}">
-					<span class="overlay animated bounce">
-						{{ x.description }}
-						<center><input type="number" name="qty" placeholder="Quantity" value="1" focus><button>Order</button> 
-						</center>
-					</span>
-					<p>{{ x.name }}</p>
-					<!--<span>
-						<i class="fa fa-star"></i> 
-						<i class="fa fa-star"></i> 
-						<i class="fa fa-star-o"></i>
-						<i class="fa fa-star-o"></i> 
-						<i class="fa fa-star-o"></i>
-					</span>-->
-				</div>    
-  
-			</div>  
 
 		</div>
-
-		<script type="text/javascript" src="js/jquery.js"></script>
-		<script type="text/javascript" src="js/default.js"></script> 
-		<script type="text/javascript" src="js/angular.js"></script> 
-		<script type="text/javascript" src="js/a-model1.js"></script> 
-		<script type="text/javascript" src="js/client.js"></script> 
-		<script type="text/javascript" src="js/formajax.js"></script> 
-
+		<!-- End of Container -->
 	</body>
 </html>
-
-	<div class="login-modal animated bounceIn">   
-		<div id="loader" class="loaderdiv"><img src="img/loader.gif" style="width:20%; margin-left:40%; margin-top:5%; margin-bottom:5%;"><center>Please Wait !<br></center></div>
-		<div class="login">  
-			<i class="fa fa-remove" id="close"></i>
-			<form action="php/login.php" method="post" id="userlogin">
-				<input type="email" name="email" placeholder="Email" required>
-				<input type="password" name="pass" placeholder="Password" required>  
-				<button id="loginsubmit">Login</button>
-			</form>
-			<button class="sign" id="signupbtn2">SignUp</button> 
-		</div>
-		<div class="signup"> 
-			<i class="fa fa-remove" id="close"></i>
-			<form action="php/signup.php" method="post" id="signupsubmit">
-				<input type="text" name="name" placeholder="Name" required>
-				<input type="email" name="email" placeholder="Email" required>
-				<input type="password" name="pass" placeholder="Password" required>
-				<input type="password" name="pass2" placeholder="Confirm Password" required>  
-				<textarea name="address" placeholder="Address" rows="5" required></textarea>
-				<input type="number" name="contact" placeholder="Contact" required>
-				<button>Signup</button>
-			</form>
-			<button class="log" id="loginbtn2">Login</button>
-		
-		</div>
-	
-	</div>
-	
-
-	<div class="loader">
-		<img src="img/loader.gif">
-	</div>
