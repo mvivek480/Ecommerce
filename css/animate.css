@@ -1270,8 +1270,7 @@
 
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
-  animation-name:fadeInDown; 
-  animation-delay:1s;
+  animation-name: fadeInDown;
 }
 
 @-webkit-keyframes fadeInDownBig {
